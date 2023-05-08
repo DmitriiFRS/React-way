@@ -35,6 +35,7 @@ function App() {
   return (
     <div className="wrapper">
       <Test test={test} question={question} setQuestion={setQuestion} />
+      Ветка 01
     </div>
   );
 }
