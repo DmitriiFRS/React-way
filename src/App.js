@@ -1,6 +1,7 @@
 import React from 'react';
 import  './Main/App.scss';
 import './Main/Null.css';
+import Invite from './Main/Invite';
 import Test from './Main/Test';
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
   return (
     <div className="wrapper">
       <Test test={test} question={question} setQuestion={setQuestion} />
-      Ветка 01
+      <Invite />
     </div>
   );
 }
