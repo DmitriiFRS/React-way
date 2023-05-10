@@ -20,7 +20,9 @@ function Test(props) {
             </>
             ) : (
             <>
-            <div style={{width: indicatorPercentage + '%'}} className="test__indicator"></div>
+            <div className="test__indicator-body">
+               <div style={{width: indicatorPercentage + '%'}} className="test__indicator"></div>
+            </div>
             <h1 className="test__title">{props.test[props.question].title}</h1>
             <ul className="test__variants-body">
                {props.test[props.question].variants.map((item,index) => { 
