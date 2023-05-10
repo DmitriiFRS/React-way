@@ -1,10 +1,12 @@
 import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import  './Main/App.scss';
 import './Main/Null.css';
 import Invite from './Main/Invite';
 import Test from './Main/Test';
+import Header from './Main/Header';
+import Home from './Main/Home'
 function App() {
-
   const test = [
     {
       title: 'Что такое React?',
@@ -55,8 +57,14 @@ function App() {
   const [question, setQuestion] = React.useState(0);
   return (
     <div className="wrapper">
-      <Test test={test} question={question} setQuestion={setQuestion} />
-      <Invite />
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/Test' element={<Test test={test} question={question} setQuestion={setQuestion}/>}/>
+          <Route path='/Invite' element={<Invite />}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
