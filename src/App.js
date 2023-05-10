@@ -60,7 +60,7 @@ function App() {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route path='' element={<Home />}/>
           <Route path='/Test' element={<Test test={test} question={question} setQuestion={setQuestion}/>}/>
           <Route path='/Invite' element={<Invite />}/>
         </Routes>
