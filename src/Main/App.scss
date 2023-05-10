@@ -78,7 +78,7 @@
       flex-direction: column;
       max-width: 400px;
       width: 100%;
-      height: 800px;
+      height: 600px;
       background: #d1d0d0;
       border-radius: 15px;
       padding: 15px 20px;
@@ -113,6 +113,7 @@
       background: #c9b715;
       text-align: center;
       transition: 0.3s;
+      font-weight: 700;
       &:hover {
          background: #1596c9;
          box-shadow: 0px 0px 19px 1px rgba(184,176,176,1);
@@ -147,4 +148,60 @@
       height: 60px;
       border-radius: 50%;
    }
+}
+.invite__popup {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   inset: 0;
+   visibility: hidden;
+   opacity: 0;
+   background: rgba($color: #000000, $alpha: 0.5);
+   transition: 0.5s;
+   &-body {
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 400px;
+      background: #9d9ea0;
+      border-radius: 10px;
+   }
+   &-body > *:not(:last-child) {
+      margin: 0 0 20px 0;
+   }
+   &-icon {
+      max-height: 100px;
+      color: #9dbac5;
+   }
+   &-btn {
+      transition: 0.3s;
+      --a1: rgba(74,177,42,1);
+      --a2: rgba(232,255,0,1);
+      padding: 10px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, var(--a1), var(--a2) 100%, var(--a1)) var(--z, 0) / 200%;
+      font-weight: 700;
+      color: #062c3b;
+      &:hover{
+         --z: 100%
+      }
+   }
+   &-title{
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      color: #0f1d02;
+      text-align: center;
+      span{
+         color: rgb(2, 61, 100);
+         font-weight: 700;
+      }
+   }
+}
+.active {
+   visibility: visible;
+   opacity: 1;
 }
