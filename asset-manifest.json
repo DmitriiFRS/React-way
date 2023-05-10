@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/React-way/static/css/main.1df0a9ff.css",
-    "main.js": "/React-way/static/js/main.89814a03.js",
+    "main.css": "/React-way/static/css/main.470abeb9.css",
+    "main.js": "/React-way/static/js/main.eaf60329.js",
     "static/js/787.9181411e.chunk.js": "/React-way/static/js/787.9181411e.chunk.js",
     "index.html": "/React-way/index.html",
-    "main.1df0a9ff.css.map": "/React-way/static/css/main.1df0a9ff.css.map",
-    "main.89814a03.js.map": "/React-way/static/js/main.89814a03.js.map",
+    "static/media/loupe.svg": "/React-way/static/media/loupe.819dbf4f84c4cdd2721389d558571a86.svg",
+    "static/media/plus.svg": "/React-way/static/media/plus.c4ad914c4a4c568589ae272f9f4b07bf.svg",
+    "static/media/minus.svg": "/React-way/static/media/minus.71e03d0391038c95d4d667bd03c6bae0.svg",
+    "static/media/check.svg": "/React-way/static/media/check.273d0756e829f8f53c75040f311a4a02.svg",
+    "main.470abeb9.css.map": "/React-way/static/css/main.470abeb9.css.map",
+    "main.eaf60329.js.map": "/React-way/static/js/main.eaf60329.js.map",
     "787.9181411e.chunk.js.map": "/React-way/static/js/787.9181411e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1df0a9ff.css",
-    "static/js/main.89814a03.js"
+    "static/css/main.470abeb9.css",
+    "static/js/main.eaf60329.js"
   ]
 }
