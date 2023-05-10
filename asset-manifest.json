@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-way/static/css/main.32eeb86f.css",
-    "main.js": "/React-way/static/js/main.a80a1eaa.js",
+    "main.js": "/React-way/static/js/main.102b41a5.js",
     "static/js/787.9181411e.chunk.js": "/React-way/static/js/787.9181411e.chunk.js",
     "index.html": "/React-way/index.html",
     "static/media/loupe.svg": "/React-way/static/media/loupe.819dbf4f84c4cdd2721389d558571a86.svg",
@@ -9,11 +9,11 @@
     "static/media/minus.svg": "/React-way/static/media/minus.71e03d0391038c95d4d667bd03c6bae0.svg",
     "static/media/check.svg": "/React-way/static/media/check.273d0756e829f8f53c75040f311a4a02.svg",
     "main.32eeb86f.css.map": "/React-way/static/css/main.32eeb86f.css.map",
-    "main.a80a1eaa.js.map": "/React-way/static/js/main.a80a1eaa.js.map",
+    "main.102b41a5.js.map": "/React-way/static/js/main.102b41a5.js.map",
     "787.9181411e.chunk.js.map": "/React-way/static/js/787.9181411e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32eeb86f.css",
-    "static/js/main.a80a1eaa.js"
+    "static/js/main.102b41a5.js"
   ]
 }
