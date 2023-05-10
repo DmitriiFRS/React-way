@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {HashRouter, Routes, Route} from 'react-router-dom'
 import  './Main/App.scss';
 import './Main/Null.css';
 import Invite from './Main/Invite';
@@ -58,13 +58,13 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path='' element={<Home />}/>
           <Route path='/Test' element={<Test test={test} question={question} setQuestion={setQuestion}/>}/>
           <Route path='/Invite' element={<Invite />}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
