@@ -5,7 +5,6 @@ import './Main/Null.css';
 import Invite from './Main/Invite';
 import Test from './Main/Test';
 import Header from './Main/Header';
-import Home from './Main/Home'
 import Converter from './/Main/Converter/Converter';
 function App({test, currency}) {
   const [question, setQuestion] = React.useState(0);
@@ -13,8 +12,7 @@ function App({test, currency}) {
     <div className="wrapper">
       <Header />
         <Routes>
-          <Route path='/React-way' element={<Home />}/>
-          <Route path='/Test' element={<Test test={test} question={question} setQuestion={setQuestion}/>}/>
+          <Route path='/React-way' element={<Test test={test} question={question} setQuestion={setQuestion}/>}/>
           <Route path='/Invite' element={<Invite />}/>
           <Route path='/Currency' element={<Converter currencyNames={currency}/>}/>
         </Routes>

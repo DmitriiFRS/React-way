@@ -5,8 +5,7 @@ function Header() {
       <section className="header">
          <nav className=" header__nav container">
             <ul className="header__list">
-               <li className="header__item"><NavLink to="/React-way">Home</NavLink></li>
-               <li className="header__item"><NavLink to="/Test">Quiz app</NavLink></li>
+               <li className="header__item"><NavLink to="/React-way">Quiz app</NavLink></li>
                <li className="header__item"><NavLink to="/Invite">Invite app</NavLink></li>
                <li className="header__item"><NavLink to="/Currency">Converter</NavLink></li>
             </ul>

@@ -29,8 +29,6 @@ function Test(props) {
                return <li onClick={() => {check(index)}} className="test__variants-item" key={index}>{item}</li> })}
             </ul>
             </>)}
-            
-
         </div>
       </div>
    )
