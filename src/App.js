@@ -1,40 +1,23 @@
 import React from 'react';
+import {Routes, Route} from 'react-router-dom';
 import  './Main/App.scss';
 import './Main/Null.css';
+import Invite from './Main/Invite';
 import Test from './Main/Test';
-function App() {
-
-  const test = [
-    {
-      title: 'Что такое React?',
-      variants: ['Библиотека', 'Фрэймворк', 'Космический спутник'],
-      correct: 0
-    },
-    {
-      title: 'Что такое JSX?',
-      variants: ['Язык программирования', 'Формат данных', 'Синтаксический сахар'],
-      correct: 2
-    },
-    {
-      title: 'Что такое Virtual DOM?',
-      variants: ['Виртуальный браузер', 'Виртуальная база данных', 'Виртуальное представление DOM'],
-      correct: 2
-    },
-    {
-      title: 'Что такое Redux?',
-      variants: ['Библиотека управления состоянием', 'Фрэймворк для создания SPA', 'Язык программирования'],
-      correct: 0
-    },
-    {
-      title: 'Что такое HOC?',
-      variants: ['Высокий порядок компонентов', 'Высокий порядок функций', 'Высокий порядок классов'],
-      correct: 0
-    }
-  ];
+import Header from './Main/Header';
+import Home from './Main/Home'
+import Converter from './/Main/Converter/Converter';
+function App({test, currency}) {
   const [question, setQuestion] = React.useState(0);
   return (
     <div className="wrapper">
-      <Test test={test} question={question} setQuestion={setQuestion} />
+      <Header />
+        <Routes>
+          <Route path='/React-way' element={<Home />}/>
+          <Route path='/Test' element={<Test test={test} question={question} setQuestion={setQuestion}/>}/>
+          <Route path='/Invite' element={<Invite />}/>
+          <Route path='/Currency' element={<Converter currencyNames={currency}/>}/>
+        </Routes>
     </div>
   );
 }
