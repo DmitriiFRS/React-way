@@ -1,5 +1,5 @@
 
-function DropDown({currencyNames, setDropDownActive, setActive, getCurrency}) {
+function DropDown({currencyNames, getCurrency}) {
    return(
       <div className="dropDown">
          <ul className="dropDown__list">

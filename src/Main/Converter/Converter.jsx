@@ -10,8 +10,10 @@ function Converter({currencyNames}) {
    const [Active2, setActive2] = React.useState(false);
    const [rate1, setRate1] = React.useState(0);
    const [rate2, setRate2] = React.useState(0);
-   const [inputValue, setInputValue] = React.useState('');
+   const [inputValue, setInputValue] = React.useState('0');
    const [outputValue, setOutputValue] = React.useState('');
+   const [currency1, setCurrency1] = React.useState([currencyNames[0].name, currencyNames[0].icon])
+   const [currency2, setCurrency2] = React.useState([currencyNames[3].name, currencyNames[3].icon])
    React.useEffect(() => {
       fetch('https://api.freecurrencyapi.com/v1/latest?apikey=9iK6i08cBV5rNIDPOACRwikSuRDXTSSkrbqdmAZ2')
       .then(resp => resp.json())
@@ -20,6 +22,10 @@ function Converter({currencyNames}) {
    React.useEffect(() => {
       setOutputValue((inputValue * rate2 / rate1).toFixed(2))
    }, [inputValue, rate1, rate2])
+   function swap() {
+      setCurrency1(currency2);
+      setCurrency2(currency1);
+   }
    return(
       <section className="converter container">
          <h2 className="converter__title">Currency Converter</h2>
@@ -27,6 +33,8 @@ function Converter({currencyNames}) {
          <div className="converter__interface">
             <InputItem setRate={setRate1}
                currencyValue={inputValue}
+               currency={currency1}
+               setCurrency={setCurrency1}
                setCurrencyValue={setInputValue}
                dataCurrency={dataCurrency}
                disabled={settings[1]} 
@@ -37,12 +45,14 @@ function Converter({currencyNames}) {
             </InputItem>
             <div className="interface-item__separator-container">
                <div className="interface-item__separator"></div>
-               <div className="interface-item__replace">
+               <div onClick={swap} className="interface-item__replace">
                   <img src={replace} alt="swap" />
                </div>
             </div>
             <InputItem setRate={setRate2}
                currencyValue={outputValue}
+               currency={currency2}
+               setCurrency={setCurrency2}
                dataCurrency={dataCurrency}
                disabled={settings[0]}
                active={Active2}
@@ -53,7 +63,7 @@ function Converter({currencyNames}) {
          </div>
          <div className="converter__exchange-rate-body">
             <h3 className="converter__exchange-rate-title title">Indicative Exchange Rate</h3>
-            <p className="converter__exchange-rate-result">1 SGD = 0.7367 USD</p>
+            <p className="converter__exchange-rate-result">1 {currency1[0]} = {(rate2 / rate1).toFixed(3)} {currency2[0]}</p>
          </div>
       </section>
    )

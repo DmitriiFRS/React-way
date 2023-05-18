@@ -2,9 +2,8 @@
 import change from './images/change.svg';
 import DropDown from './DropDown';
 import React from 'react';
-function InputItem({dataCurrency, outputValue, setOutputValue, currencyValue, setCurrencyValue, setRate, currencyNames, title, active, setActive, disabled}) {
+function InputItem({currency, setCurrency, dataCurrency, currencyValue, setCurrencyValue, setRate, currencyNames, title, active, setActive, disabled}) {
    const [isDropDownActive, setDropDownActive] = React.useState(false);
-   const [currency, setCurrency] = React.useState([currencyNames[0].name, currencyNames[0].icon]);
    function openMenu() {
       setDropDownActive(!isDropDownActive);
       setActive(!active);
