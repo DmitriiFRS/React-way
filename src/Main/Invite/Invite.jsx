@@ -1,11 +1,11 @@
-import  './App.scss';
-import './Null.css';
+import '../App.scss'
+import '../Null.css';
 import React from 'react';
-import glass from './icons/loupe.svg';
-import Skeleton from './Utilities/Skeleton';
-import minus from './icons/minus.svg';
-import plus from './icons/plus.svg';
-import InvitePopup from './Utilities/InvitePopup';
+import glass from '../icons/loupe.svg';
+import Skeleton from '../Utilities/Skeleton';
+import minus from '../icons/minus.svg';
+import plus from '../icons/plus.svg';
+import InvitePopup from '../Utilities/InvitePopup';
 function Invite() {
 
    const [users, setUsers] = React.useState('');

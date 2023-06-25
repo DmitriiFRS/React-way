@@ -2,8 +2,8 @@ import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import  './Main/App.scss';
 import './Main/Null.css';
-import Invite from './Main/Invite';
-import Test from './Main/Test';
+import Invite from './Main/Invite/Invite';
+import Test from './Main/Test/Test';
 import Header from './Main/Header';
 import Converter from './/Main/Converter/Converter';
 function App({test, currency}) {

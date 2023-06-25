@@ -1,5 +1,5 @@
-import  './App.scss';
-import './Null.css';
+import  '../App.scss';
+import '../Null.css';
 import React from 'react';
 function Test(props) {
    let percentage = 100 / props.test.length;
